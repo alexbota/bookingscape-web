@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import Layout from "../../hoc/MainLayout";
+import Layout from "../../hoc/Layout";
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Password } from 'primereact/password';
 import { Divider } from 'primereact/divider';
 import { classNames } from 'primereact/utils';
 import { StyledForm } from "./styled";
+import { login } from "../../redux-store/actions/auth"
+import { useDispatch } from "react-redux";
 
-const Login = () => {
+const Login = (props) => {
     const [formData, setFormData] = useState({});
     const defaultValues = {
         email: '',
@@ -17,9 +19,15 @@ const Login = () => {
 
     const { control, formState: { errors }, handleSubmit, reset } = useForm({ defaultValues });
 
+    const dispatch = useDispatch();
+
     const onSubmit = (data) => {
         setFormData(data);
-
+        dispatch(login(formData.email, formData.password))
+            .then(() => {
+                props.history.push("/dashboard");
+                window.location.reload();
+            })
         reset();
     };
 

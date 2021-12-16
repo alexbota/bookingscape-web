@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import RequireAuth from "../shared/security/AuthRoute";
+import RequireAuth from "../routes/auth-route";
 
 // ELEMENTS
 import Home from "../containers/Home"

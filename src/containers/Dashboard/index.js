@@ -1,5 +1,5 @@
 import React from 'react'
-import MainLayout from "../../hoc/MainLayout";
+import MainLayout from "../../hoc/Layout";
 
 const Dashboard = () => {
     return (

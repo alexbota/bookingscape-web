@@ -1,9 +1,9 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
-import { useAuth } from "./Auth";
+import authHeader from "../services/auth-header";
 
 function RequireAuth({ children }) {
-    const auth = useAuth(children);
+    const auth = !!authHeader().Authorization;
     return auth ? children : <Navigate to="/login" />;
 }
 
