@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const StyledForm = styled.div`
   .card {
-    min-width: 450px;
+    width: 550px;
+    background: #fff;
   }
   .card form {
     margin-top: 2rem;
@@ -10,14 +11,9 @@ export const StyledForm = styled.div`
   .card .p-field {
     margin-bottom: 1.5rem;
   }
-  @media screen and (max-width: 960px) {
-    .card {
-      width: 80%;
-    }
-  }
   @media screen and (max-width: 640px) {
     .card {
-      width: 100%;
+      width: 90vw;
       min-width: 0;
     }
   }

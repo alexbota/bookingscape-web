@@ -5,12 +5,14 @@ import RequireAuth from "../routes/auth-route";
 // ELEMENTS
 import Home from "../containers/Home"
 import Dashboard from '../containers/Dashboard'
-import Login from '../containers/Login'
+import SignIn from '../containers/SignIn'
+import SignUp from '../containers/SignUp'
 
 const RoutesProvider = () => (
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
         <Route
             path="/dashboard"
             element={
