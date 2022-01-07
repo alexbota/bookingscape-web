@@ -27,8 +27,8 @@ const SignIn = () => {
         dispatch(login(formData))
             .then(() => {
                 navigate("/dashboard");
+                reset();
             })
-        reset();
     };
 
     const getFormErrorMessage = (name) => {
