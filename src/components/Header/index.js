@@ -2,9 +2,16 @@ import React, { useRef } from 'react';
 import Logo from '../../assets/logo.png'
 import { Button } from 'primereact/button'
 import { Menu } from 'primereact/menu';
+import { useDispatch } from "react-redux";
+import { logout } from "../../redux-store/actions/auth";
+import {useNavigate} from "react-router-dom";
 
 const Header = ({ setVisible }) => {
     const menu = useRef(null);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const items = [
         {
             label: 'Reset Password',
@@ -13,6 +20,10 @@ const Header = ({ setVisible }) => {
         {
             label: 'Logout',
             icon: 'pi pi-sign-out',
+            command: () => {
+                dispatch(logout())
+                navigate("/login")
+            }
         }
     ]
     return (

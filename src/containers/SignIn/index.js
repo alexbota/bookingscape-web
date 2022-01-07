@@ -26,7 +26,7 @@ const SignIn = () => {
         setFormData(data);
         dispatch(login(formData))
             .then(() => {
-                navigate("/dashboard");
+                navigate("/calendar");
                 reset();
             })
     };

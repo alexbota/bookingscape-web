@@ -6,3 +6,6 @@ export const LOGOUT = "LOGOUT";
 
 export const SET_MESSAGE = "SET_MESSAGE";
 export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+
+export const RETRIEVE_ROOMS_SUCCESS = "RETRIEVE_ROOMS_SUCCESS";
+export const SAVED_ROOM_SUCCESS = "SAVED_ROOM_SUCCESS";

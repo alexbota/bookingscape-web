@@ -6,7 +6,7 @@ import RequireAuth from "../routes/auth-route";
 import Home from "../containers/Home"
 import SignIn from '../containers/SignIn'
 import SignUp from '../containers/SignUp'
-import CalendarContainer from '../containers/Calendar'
+import Calendar from '../containers/Calendar'
 
 const RoutesProvider = () => (
     <Routes>
@@ -17,7 +17,7 @@ const RoutesProvider = () => (
             path="/calendar"
             element={
                 <RequireAuth>
-                    <CalendarContainer />
+                    <Calendar />
                 </RequireAuth>
             }
         />
